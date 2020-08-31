@@ -379,8 +379,6 @@ public final class ImportHandlerUtils {
                 chargeAmountTypeId = "1";
             } else if (chargeAmountType.equalsIgnoreCase("% Amount")) {
                 chargeAmountTypeId = "2";
-            } else {
-                chargeAmountTypeId = chargeAmountType;
             }
             chargeAmountTypeEnum = new EnumOptionData(null, null, chargeAmountTypeId);
         }
