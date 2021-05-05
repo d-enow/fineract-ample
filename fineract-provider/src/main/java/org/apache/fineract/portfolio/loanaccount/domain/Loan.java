@@ -525,7 +525,6 @@ public class Loan extends AbstractPersistableCustom {
 
         // Add net get net disbursal amount from charges and principal
         this.netDisbursalAmount = this.approvedPrincipal.subtract(deriveSumTotalOfChargesDueAtDisbursement());
-
     }
 
     private LoanSummary updateSummaryWithTotalFeeChargesDueAtDisbursement(final BigDecimal feeChargesDueAtDisbursement) {
@@ -2189,6 +2188,9 @@ public class Loan extends AbstractPersistableCustom {
             LocalDate expecteddisbursementDate = command.localDateValueOfParameterNamed("expectedDisbursementDate");
 
             BigDecimal approvedLoanAmount = command.bigDecimalValueOfParameterNamed(LoanApiConstants.approvedLoanAmountParameterName);
+
+            BigDecimal netDisbursalAmount = command
+                    .bigDecimalValueOfParameterNamed(LoanApiConstants.disbursementNetDisbursalAmountParameterName);
 
             if (approvedLoanAmount != null) {
 

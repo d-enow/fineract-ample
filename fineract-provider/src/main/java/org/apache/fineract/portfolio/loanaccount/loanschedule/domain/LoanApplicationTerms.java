@@ -1835,5 +1835,4 @@ public final class LoanApplicationTerms {
         }
         return this;
     }
-
 }
