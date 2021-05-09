@@ -5121,7 +5121,7 @@ public class ClientLoanIntegrationTest {
         loanProductConfiguration.addProperty("graceOnArrearsAgeing", bool);
         return loanProductConfiguration;
     }
-
+// comment
     private Integer applyForLoanApplicationWithProductConfigurationAsTrue(final Integer clientID, final Integer loanProductID,
                                                                           String principal) {
         LOG.info("--------------------------------APPLYING FOR LOAN APPLICATION--------------------------------");
